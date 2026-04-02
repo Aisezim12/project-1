@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title></title>
+
+
+<h1 id="h1"></h1>
+
+<script>
+let h1 = document.getElementById("h1")
+let str = "Enter баскычын бас"
+let number = 0
+ 
+for (let i = 0; i < str.length; i++) {
+    h1.innerHTML += "<span>" + str[i] + "</span>"
+}
+
+
+document.body.onkeyup = function(e) {
+    if (e.key === "Enter" && number < str.length) {
+        h1.children[number].style.color = "red"
+        number++
+    }
+}
+</script>
+
+</body>
+</html>
